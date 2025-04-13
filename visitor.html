@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlympicExplorer</title>
+    <link rel="stylesheet" href="visitor.css">
+    <link rel="icon" href="/img/autre/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Google Translate Element -->
+    <div id="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+    <div class="container">
+        <button id="go-to-weather">Confirmer</button>
+        <input type="text" id="search-input" placeholder="Rechercher des événements..." onkeyup="filterItems()">
+        <div>
+            <select id="event-selector" onchange="filterItems()">
+                <option value="">Sélectionner un événement</option>
+                <!-- Options added dynamically via JavaScript -->
+            </select>
+            <select id="date-selector" onchange="filterItems()">
+                <option value="">Sélectionner la date</option>
+                <!-- Options added dynamically via JavaScript -->
+            </select>
+            <select id="stade-selector" onchange="filterItems()">
+                <option value="">Sélectionner le stade</option>
+                <!-- Options added dynamically via JavaScript -->
+            </select>
+        </div>
+        <h1>Choisissez vos événements</h1>
+        <div id="items-list"></div>
+        <div id="selected-items-container"></div>
+        <div id="selected-count" class="floating-text"></div>
+        <input type="hidden" id="items-string">
+        <div class="floating-page-nav">
+            <span>Page</span>
+            <input type="number" id="page-input" value="1" min="1">
+            <span id="page-count">/ 1</span>
+        </div>
+    </div>
+    <script src="visitor.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'fr'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.chat-header {
+    padding: 20px;
+    background: #007BFF;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #e5e5e5;
+}
+
+.sent, .received {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.sent {
+    background: #007BFF;
+    align-self: flex-end;
+    margin-right: 10px; /* Reduced margin for more right push */
+    border-bottom-right-radius: 0;
+}
+
+.received {
+    background: #666;
+    align-self: flex-start;
+    margin-left: 10px; /* Reduced margin for more left push */
+    border-bottom-left-radius: 0;
+}
+
+.chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+
+.chat-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chat-form button:hover {
+    background: #0056b3;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+#back-button {
+    position: fixed; /* Fixed positioning to ensure visibility */
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* High z-index to ensure it's on top */
+}
+
+#back-button:hover {
+    background: #0056b3;
+}
+
+.profile-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#clear-chat, #scroll-bottom {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#clear-chat {
+    right: 130px;  
+}
+
+.message-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+#typing-indicator {
+    display: none;  
+    text-align: center;
+    margin: 10px;
+    font-style: italic;
+}

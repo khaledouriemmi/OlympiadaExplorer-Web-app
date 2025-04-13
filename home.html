@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Olympic Explorer Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+        }
+        ::selection {
+            color: #f2f2f2;
+            background: #f86d8d;
+        }
+        body::before,
+        body::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body::before {
+            clip-path: circle(30% at left 20%);
+            opacity: 0.4;
+            background-image: linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%);
+        }
+        body::after {
+            opacity: 0.4;
+            clip-path: circle(25% at right 80%);
+            background-image: linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%);
+        }
+        #google_translate_element {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        header {
+            height: 85vh;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 12;
+            border-radius: 25px;
+            margin: auto;
+            position: relative;
+        }
+        header .navbar {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #000;
+            font-weight: 500;
+        }
+        .navbar .buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .navbar .buttons input {
+            outline: none;
+            color: #f2f2f2;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 12px;
+            padding: 6px 15px;
+            border: none;
+            cursor: pointer;
+            background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+        }
+        .navbar .buttons input:hover {
+            transform: scale(0.97);
+        }
+        header .text-content {
+            width: 60%;
+            margin: 20px 50px;
+        }
+        .text-content h2 {
+            font-size: 27px;
+            font-weight: 600;
+        }
+        .text-content p {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        @media (max-width: 850px) {
+            header .navbar {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 5px;
+            }
+            .navbar .buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header .text-content {
+                width: 80%;
+                margin: 30px 20px;
+            }
+            .text-content h2 {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 410px) {
+            header {
+                height: 100vh;
+                width: 100%;
+                border-radius: 0;
+            }
+            header .navbar {
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="status.html">OlympicExplorer</a></div>
+            <div class="buttons">
+                <input type="button" value="Continue" onclick="location.href='status.html'">
+                <input type="button" value="About Us" onclick="location.href='about.html'">
+            </div>
+        </nav>
+        <div class="text-content">
+            <h2>Discover Paris 2024 with AI Guidance</h2>
+            <p>Welcome to our AI-powered guide for the Paris 2024 Olympics! Built as a passion project by a high school student, this guide offers a personalized experience tailored to both athletes and visitors. Navigate the city, find the best events, discover local attractions, and get answers to all your questions with our free AI companion. Your ultimate Olympic experience awaits!</p>
+        </div>
+    </header>
+    <footer>
+         © 2024 Olympic Explorer. All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

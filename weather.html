@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+</head>
+<body>
+    <!-- Google Translate Element -->
+    <div id="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <button id="go-to-oeai" style="top: 40px;">Go to OE AI Chatbot</button>
+    <button id="redirect-button">Go to Your Page</button>
+
+    <div class="container">
+        <div class="buttons-container">
+            <button id="explore-deals-button">Explore Deals</button>
+            <button id="news-button">News</button> <!-- New button for news.html -->
+        </div>
+        <h1>Weather Information</h1>
+        <div id="weather-container" class="fade-in"></div>
+        <button id="prev-button">Previous</button>
+        <button id="next-button">Next</button>
+    </div>
+    <div id="countdown">
+        <p id="timer"></p>
+    </div>
+    <script src="weather.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        document.getElementById('explore-deals-button').addEventListener('click', function() {
+            window.location.href = 'offers.html';
+        });
+
+        document.getElementById('news-button').addEventListener('click', function() {
+            window.location.href = 'news.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Explorer - About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+</head>
+<body>
+    
+
+    <div id="main-container">
+        <header id="navbar">
+            <div id="logo-container">
+                <img src="logo.svg" alt="Logo" id="logo-svg"> <!-- Replace with actual logo path -->
+                <span>Olympic Explorer</span>
+            </div>
+            <div id="nav-toggle">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+            </div>
+            <ul id="nav-ul">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="weather.html">Events</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            
+        </header>
+        <div id="translate-container">
+            <div id="google_translate_element"></div>
+        </div>
+        <div id="text-content">
+            <h2>About Us</h2>
+            <p>Welcome to Olympic Explorer! This website is created with the intention of promoting the Olympics and is a project aimed at developing tech skills. We want to clarify that this website has no commercial intentions and does not intend to violate any copyright laws.</p>
+            <p>This project began as a school project for a high school Olympiad but has since grown into a more serious endeavor. Our goal is to provide valuable information about the Olympics and help others learn and explore the event.</p>
+            <p>Please note that we do not store any data about our users. Your privacy is important to us, and we are committed to ensuring that your information remains secure.</p>
+            <p>Thank you for visiting our site. We hope you find it informative and engaging as we continue to learn and develop our skills.</p>
+        </div>
+    </div>
+</body>
+    <footer id="footer">
+        <p> © 2024 Olympic Explorer. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</html>

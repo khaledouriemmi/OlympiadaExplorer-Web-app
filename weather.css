@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#weather-container {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+button {
+    padding: 5px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Adjust this value to control the spacing */
+}
+
+.buttons-container button {
+    flex: 1;
+    margin: 5px;
+}
+
+#countdown {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Fixed position at the top */
+    top: 40px; /* Lowered position */
+    padding: 10px 0; /* Padding to ensure some spacing */
+    background-color: #fff; /* Background color for visibility */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Subtle shadow for a lifted effect */
+    
+}
+@media  (max-width: 576px) {
+    #countdown{ position: absolute;
+        translate:0px -5px ;
+        width: 500px;
+
+    }
+    #translate-container{
+        translate: 0 300px;
+    }
+
+}
+
+        
+
+#timer {
+    background-color: #007BFF; /* Bright background color for the timer */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for better shape and readability */
+    border-radius: 5px; /* Slight rounding of corners */
+    font-size: 20px; /* Slightly larger font for readability */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for depth */
+}
+
+/* Position the buttons at the top corners */
+#go-to-oeai {
+    position: fixed;
+    top: 40px; /* Lowered position */
+    right: 10px;
+}
+
+#redirect-button {
+    position: fixed;
+    top: 40px; /* Lowered position */
+    left: 10px;
+}
+#translate-container {
+    z-index: 1000;
+    text-align: left;
+    padding: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: static;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Olympiada Explorer | Home</title>
+    <link rel="stylesheet" href="homebeta.css">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+</head>
+<body>
+    <div id="main-container">
+        <div id="translator-div">
+            <div id="google_translate_element"></div>
+        </div>
+        <div id="navbar">
+            <div id="logo-container">
+                <a id="logoexception" href="status.html"><img src="logo.svg" id="logo-svg" alt="Logo"></a>
+                L'Olympiada Explorer
+            </div>
+            <div id="nav-toggle">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+            </div>
+            <div id="nav-ul">
+                <a class="nav-item" id="continue-btn" href="status.html">Continue →</a>
+                <a class="nav-item" href="https://www.linkedin.com/in/khaled-ouriemmi">Contact Us</a>
+                <a class="nav-item" href="about.html">About Us</a>
+            </div>
+        </div>
+        <div id="text-content">
+            <h2>Discover Paris 2024 with AI Guidance</h2>
+            <p>Welcome to our AI-powered guide for the Paris 2024 Olympics! Built as a passion project by a high school student, this guide offers a personalized experience tailored to both athletes and visitors. Navigate the city, find the best events, discover local attractions, and get answers to all your questions with our free AI companion. Your ultimate Olympic experience awaits!</p>
+        </div>
+        <div id="video-placeholder">
+            <!-- YouTube Video Embed -->
+            <iframe width="1920" height="450" src="https://www.youtube.com/embed/j73ayFFBKzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>© 2024 Olympiada Explorer. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.getElementById('nav-toggle');
+            const navUl = document.getElementById('nav-ul');
+
+            navToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

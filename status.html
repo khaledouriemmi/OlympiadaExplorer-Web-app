@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to OlympicExplorer</title>
+    <link rel="stylesheet" href="status.css">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+</head>
+<body>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
+
+    <div class="container">
+        <h1>Welcome to OlympicExplorer</h1>
+        <p>Please choose your status:</p>
+        <div class="button-group">
+            <button id="visitor-button" class="status-button" data-status="Visitor">Visitor</button>
+            <button id="athlete-button" class="status-button" data-status="Athlete">Athlete</button>
+        </div>
+        <div id="athlete-options" style="display:none;">
+            <p>Please select your sport:</p>
+            <select id="sport-selector">
+                <option value="">Select Sport</option>
+                <!-- Sports options added dynamically -->
+            </select>
+        </div>
+        <button id="go-button">Go</button>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <script src="status.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

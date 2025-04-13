@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Deals via TripAdvisor</title>
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #0043a4;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+   
+    </style>
+</head>
+<body>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
+
+    <header>
+        <h1>Find the Best Travel Deals</h1>
+    </header>
+    <main>
+        <a class="link-button" href="https://www.tripadvisor.fr/" target="_blank">Visit TripAdvisor for More Deals</a>
+        <iframe id="dealFrame" src="https://www.tripadvisor.fr/"></iframe>
+    </main>
+    <footer>
+         2024 Travel Deals. All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
